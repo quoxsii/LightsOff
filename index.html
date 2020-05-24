@@ -1,0 +1,40 @@
+<!-- 3,7,10 -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="shortcut icon" href="assets/img/icon.png" type="image/png">
+  <script src="database/pouchdb-7.1.1.min.js"></script>
+  <script src="database/dbscript.js"></script>
+  <script src="assets/js/script.js"></script>
+  <title>Выключите свет</title>
+</head>
+<body onload="showScores(11);">
+  <p id="koncha"></p>
+  <div class="game_content">
+    <div id="gm_header" class="game_header"></div>
+    <div class="game_main">
+      <div id="scores" class="score_list">
+        <input id="pname" class="inp_name" type="text" name="player_name" minlength="3" placeholder="Ник-нейм"/>
+        <button id="btn_setname" class="btn" onclick="setName();">ОК</button><br/>
+        <p id="err_setname" class="err_msg"><br/></p><br/>
+        Таблица победителей:<br/><br/>
+        <div id="tab" class="tab">
+          <p id="tab_name" class="tab_row">Ник-нейм</p>
+          <p id="tab_score" class="tab_row">Ходы</p>
+          <p id="tab_time" class="tab_row">Время</p>
+          <p id="tab_points" class="tab_row">Очки</p>
+        </div>
+      </div> 
+      <span id="square" class="board"></span>
+    </div>
+    <div id="gm_footer" class="game_footer">
+      <button id="btn_start" class="btn btn_spec" onclick="startGame();">Играть</button>
+    </div>
+  </div>
+</body>
+</html>
